@@ -22,6 +22,9 @@ Route::get('/about', function () {
 Route::get('/contacts', function () {
     return view('contacts');
 });
+Route::get('/books', function () {
+    return view('books');
+});
 Auth::routes();
-
+Route::get('/p/create', 'PostController@create');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
